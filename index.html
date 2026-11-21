@@ -10,22 +10,54 @@
 button,input{font:inherit}button{cursor:pointer}.top{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;padding:34px 20px 48px}.top-inner,main{width:min(1160px,calc(100% - 32px));margin:auto}
 .kicker{margin:0 0 8px;color:#bfdbfe;font-size:.85rem;font-weight:800}.title{display:inline-block;margin:0;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.05em;outline:0}.title:focus{padding:3px 8px;margin-left:-8px;border-radius:8px;background:#ffffff1c;box-shadow:0 0 0 3px #bfdbfe88}
 main{margin-top:-24px;padding-bottom:40px}.toolbar,.summary,.card,.empty{background:#fff;border:1px solid var(--line);box-shadow:0 10px 28px #0f172a12}.toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:14px;border-radius:16px}.group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.btn{min-height:40px;padding:8px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-weight:800}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.danger{color:var(--red);border-color:#fecaca}.btn.active{background:#dbeafe;border-color:#93c5fd;color:#1d4ed8}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}.summary{padding:17px;border-radius:16px}.label{color:var(--muted);font-size:.88rem;font-weight:800}.value{margin-top:5px;font-size:clamp(1.45rem,3vw,2.3rem);font-weight:900;letter-spacing:-.05em}.section-head{display:flex;justify-content:space-between;align-items:center;margin:28px 0 12px}.section-head h2{margin:0;font-size:1.2rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.card{position:relative;overflow:hidden;padding:18px;border-radius:16px}.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent,#2563eb)}.card-top{display:flex;justify-content:space-between;gap:8px}.name{margin:9px 0 0;font-size:1.3rem;overflow-wrap:anywhere}.rank{display:inline-flex;align-items:center;min-height:25px;padding:0 8px;border-radius:99px;background:#eff6ff;color:#1d4ed8;font-size:.75rem;font-weight:900}.icons{display:flex;gap:5px}.icon{border:0;background:transparent;color:var(--muted);font-size:1.05rem}.votes{margin:22px 0 0;font-size:3rem;font-weight:900;letter-spacing:-.07em}.rate{margin-top:2px;color:#059669;font-weight:900}.bar{height:12px;margin-top:16px;border-radius:99px;overflow:hidden;background:#e7edf5}.fill{height:100%;border-radius:inherit;transition:width .2s}.tally-view .bar{display:block}.tally-view .votes{font-size:2.3rem}.controls{display:grid;grid-template-columns:1fr 1.2fr;gap:8px;margin-top:18px}.minus{color:var(--red);border-color:#fecaca}.plus{background:var(--blue);color:#fff;border-color:var(--blue)}.empty{padding:34px;text-align:center;border-radius:16px;color:var(--muted)}.empty strong{display:block;color:var(--ink);margin-bottom:5px}.modal-bg{position:fixed;inset:0;z-index:30;display:none;place-items:center;padding:18px;background:#0f172a88}.modal-bg.open{display:grid}.modal{width:min(430px,100%);padding:22px;border-radius:16px;background:#fff}.modal h3{margin:0 0 15px}.field{display:grid;gap:7px}.field input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
-.presentation{position:fixed;inset:0;z-index:100;overflow:auto;background:#fff;color:#111827}.presentation[hidden]{display:none!important}.sheet{width:min(1180px,calc(100% - 72px));margin:auto;padding:28px 0 42px}.pres-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.pres-head h1{margin:0;font-size:clamp(2rem,4.2vw,3.6rem);letter-spacing:-.07em}.pill{padding:6px 14px;border:2px solid #1f2937;border-radius:99px;background:#fff;color:#111827;font-weight:800}.pres-actions{display:flex;gap:9px;align-items:center;margin:10px 0 24px}.pres-total{padding:7px 14px;border:1px solid #9ca3af;border-radius:99px;color:#4b5563;font-size:.82rem;font-weight:800}.pres-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 64px}.pres-candidate{display:grid;grid-template-columns:142px minmax(0,1fr);grid-template-rows:38px 18px;grid-template-areas:"n v""n b";align-items:center;min-height:92px}.pres-name{grid-area:n;display:flex;align-items:center;justify-content:center;min-height:92px;padding:10px;border:2px solid #1f2937;font-size:clamp(.95rem,1.8vw,1.3rem);font-weight:800;text-align:center}.pres-votes{grid-area:v;font-size:clamp(1.15rem,2.4vw,1.8rem);font-weight:900}.pres-bar{grid-area:b;height:16px;overflow:hidden;border:2px solid #1f2937;border-radius:0 99px 99px 0;background:#fff}.pres-bar span{display:block;height:100%;opacity:.65}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
 @media(max-width:700px){.top{padding:26px 16px 38px}.top-inner,main{width:calc(100% - 24px)}.toolbar{align-items:stretch}.group{width:100%}.group:last-child{justify-content:flex-end}.group .btn{flex:1}.summary-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.sheet{width:calc(100% - 28px);padding-top:20px}.pres-head h1{font-size:1.65rem}.pres-grid{gap:15px 16px}.pres-candidate{grid-template-columns:92px minmax(0,1fr);grid-template-rows:28px 12px;min-height:70px}.pres-name{min-height:70px;padding:5px;font-size:.82rem}.pres-votes{font-size:1rem}.pres-bar{height:11px}.pres-total{margin-left:auto;padding:6px 9px;font-size:.72rem}}
+.presentation{display:none!important}\n
+/* 컴퓨터 화면용 компакт한 상단 영역 */
+@media (min-width: 701px) {
+  .top { padding: 20px 20px 30px; }
+  .top-inner, main { width: min(1320px, calc(100% - 40px)); }
+  .kicker { margin-bottom: 4px; font-size: .75rem; }
+  .title { font-size: clamp(1.65rem, 3vw, 2.45rem); }
+  main { margin-top: -16px; }
+  .toolbar { padding: 9px 12px; border-radius: 12px; gap: 8px; }
+  .btn { min-height: 34px; padding: 6px 10px; font-size: .86rem; }
+  .summary-grid { gap: 10px; margin: 11px 0; }
+  .summary { padding: 12px 15px; border-radius: 12px; }
+  .value { font-size: clamp(1.25rem, 2.5vw, 1.85rem); }
+  .section-head { margin: 18px 0 9px; }
+  .cards { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+  .card { padding: 10px; border-radius: 10px; }
+  .card:before { width: 3px; }
+  .card-top { gap: 4px; }
+  .rank { min-height: 19px; padding: 0 5px; font-size: .62rem; }
+  .name { margin-top: 4px; font-size: .92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .icons { gap: 1px; }
+  .icon { padding: 2px; font-size: .8rem; }
+  .votes { margin-top: 10px; font-size: 1.7rem; }
+  .rate { font-size: .72rem; }
+  .bar { margin-top: 8px; height: 7px; }
+  .controls { margin-top: 8px; gap: 4px; }
+  .controls .btn { min-height: 28px; padding: 3px 5px; font-size: .72rem; }
+}
+
 </style>
 </head>
 <body>
 <header class="top"><div class="top-inner"><p class="kicker">투표 개표 관리</p><h1 id="title" class="title" contenteditable="true" spellcheck="false">실시간 투표 개표 현황</h1></div></header>
 <main>
 <section class="toolbar">
-<div class="group"><button class="btn primary" id="add">＋ 후보자 추가</button><button class="btn" id="undo" disabled>↶ 실행 취소</button><button class="btn danger" id="reset">전체 초기화</button><button class="btn" id="full">전체 화면 보기</button></div>
+<div class="group"><button class="btn primary" id="add">＋ 후보자 추가</button><button class="btn" id="undo" disabled>↶ 실행 취소</button><button class="btn danger" id="reset">전체 초기화</button></div>
 <div class="group"><span class="label">표시 방식</span><button class="btn active view" data-view="number">숫자형</button><button class="btn view" data-view="graph">그래프형</button></div>
 </section>
 <section class="summary-grid"><article class="summary"><div class="label">전체 득표수</div><div class="value" id="total">0표</div></article><article class="summary"><div class="label">후보자 수</div><div class="value" id="count">0명</div></article><article class="summary"><div class="label">현재 1위</div><div class="value" id="leader">-</div></article></section>
 <div class="section-head"><h2>후보자별 개표 현황</h2><span class="label" id="saved">저장 대기</span></div>
 <section class="cards" id="cards"></section><section class="empty" id="empty"><strong>등록된 후보자가 없습니다.</strong>후보자 추가 버튼을 눌러 개표를 시작하세요.</section>
 </main>
-<div class="presentation" id="presentation" hidden><div class="sheet"><div class="pres-head"><h1 id="presTitle">실시간 투표 개표 현황</h1><button class="pill" id="closePres">닫기</button></div><div class="pres-actions"><button class="pill" id="presAdd">후보자 추가</button><button class="pill" id="presReset">초기화</button><div class="pres-total" id="presTotal">전체 0표</div></div><section class="pres-grid" id="presGrid"></section></div></div>
 <div class="modal-bg" id="modalBg"><form class="modal" id="form"><h3 id="modalTitle">후보자 추가</h3><div class="field"><label for="nameInput">후보자 이름</label><input id="nameInput" maxlength="40" required></div><div class="modal-actions"><button type="button" class="btn" id="cancel">취소</button><button class="btn primary">저장</button></div></form></div>
 <script>
 (()=>{const key="vote-final-v5",colors=["#2563eb","#7c3aed","#db2777","#ea580c","#059669","#0891b2"];let state=load(),history=[],editId=null;
@@ -43,9 +75,7 @@ $("#add").onclick=()=>open();$("#cancel").onclick=close;$("#form").onsubmit=e=>{
 $("#reset").onclick=()=>confirm("전체 개표 현황을 초기화할까요?")&&commit(()=>state.candidates=[]);$("#undo").onclick=()=>{if(history.length){state=history.pop();save();render()}};
 document.querySelectorAll(".view").forEach(b=>b.onclick=()=>commit(()=>state.view=b.dataset.view));
 $("#title").onfocus=()=>$("#title").dataset.old=state.title;$("#title").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#title").blur()}if(e.key==="Escape"){$("#title").textContent=$("#title").dataset.old;$("#title").blur()}};$("#title").onblur=()=>{let n=$("#title").textContent.replace(/\s+/g," ").trim();if(n&&n!==state.title)commit(()=>state.title=n);else $("#title").textContent=state.title};
-function openPres(){$("#presentation").hidden=false;document.body.style.overflow="hidden";try{document.documentElement.requestFullscreen?.()}catch{}}
-function closePres(){$("#presentation").hidden=true;document.body.style.overflow="";try{document.exitFullscreen?.()}catch{}}
-$("#full").onclick=openPres;$("#closePres").onclick=closePres;$("#presAdd").onclick=()=>{closePres();open()};$("#presReset").onclick=()=>{closePres();$("#reset").click()};document.onkeydown=e=>e.key==="Escape"&&!$("#presentation").hidden&&closePres();render()})();
+render()})();
 </script>
 </body>
 </html>
